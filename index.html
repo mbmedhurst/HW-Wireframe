@@ -5,27 +5,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wireframe</title>
+    <!-- I added the reset.css when all the other css was nearly done, and it didn't break anything, so I left it -->
+    <link rel="stylesheet" href="./reset.css">
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 
 <body>
-
-    <header id="pageHeader">header</header>
-    <nav>nav</nav>
-    <div id="flexContainer">
-        <section class="sectionFixed">
-            <header>section</header>
-            <article id="article">
-                <header>article</header>
-                <div id="hTags">
-                    <h4>h1, h2, h3</h4>
+    <div id="container">
+        <div id="header">
+            <!-- I put a flexbox inside most of the cells - including the nested cells - in order to center the text -->
+            <div class="cell-content">header</div>
+        </div>
+        <div id="nav">
+            <div class="cell-content">nav</div>
+        </div>
+        <div id="section">section
+            <div id="section-container">
+                <div id="article">article</div>
+                <div id="htags">
+                    <div class="cell-content">h1, h2, h3</div>
                 </div>
-                <div id="pTags">p</div>
-            </article>
-        </section>
-        <aside class="asideFlex">aside</aside>
+                <div id="ptag">
+                    <div class="cell-content">p</div>
+                </div>
+            </div>
+        </div>
+        <div id="aside">
+            <div class="cell-content">aside</div>
+        </div>
+        <div id="footer">
+            <div class="cell-content">footer</div>
+        </div>
     </div>
-    <footer>footer</footer>
 
 </body>
 

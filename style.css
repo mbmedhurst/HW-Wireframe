@@ -5,64 +5,93 @@ body {
     font-size: 18px;
 }
 
-#pageHeader, nav, footer {
-    margin-left: 50px;
-    margin-right: 50px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    padding: 30px;
-    text-align: center;
-    background-color: #ebebeb;
-}
-
-#flexContainer {
-    margin-left: 50px;
-    margin-right: 50px;
-    display: flex;
-    text-align: center;
-}
-
-#flexContainer > div {
-    margin: 5px;
-    background-color: #ebebeb;
-}
-
-.sectionFixed {
-    width: 650px;
-    height: 350px;
-    background-color: #ebebeb;
-    padding: 10px;
-    border-right-style: solid;
-    border-right-width: 10px;
-}
-
-.asideFlex {
-    flex-grow: 1;
-    padding: 10px;
-    background-color: #ebebeb;
-}
-
-#article {
+#container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr 1fr;
     background-color: #777;
-    text-align: center;
-    color: #ebebeb;
-    padding: 20px;
-    height: 235px;
-    margin-top: 50px;
+    grid-gap: 10px;
+    margin: 10px 50px 50px 50px;
 }
 
-#hTags, #pTags {
+/* this is for the flexbox with centered text inside each cell */
+.cell-content {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    background-color: #ebebeb;
+    color: #777;    
+    align-items: center;
+    justify-content: center;
+}
+
+#header {
+    grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
     background-color: #ebebeb;
     text-align: center;
-    color: #777;
-    margin-top: 30px;
-    padding: 20px;
-    height: 30px;
 }
 
-h4 {
+#nav {
+   grid-column: 1 / span 2;
+   grid-row: 2 / span 1;
+   background-color: #ebebeb;
+   text-align: center;
+}
+
+/* Instead of the flex container, I added some padding at the top here to bring down the text a little bit */
+#section {
+    grid-column: 1 / span 1;
+    grid-row: 3 / span 2;
+    background-color: #ebebeb;
     text-align: center;
-    margin-top: auto;
-    margin-bottom: auto;
-    padding: 10px
+    padding-top: 15px;
+}
+
+#aside {
+    grid-column: 2 / span 1;
+    grid-row: 3 / span 2;
+    background-color: #ebebeb;
+    text-align: center;
+}
+
+#footer {
+    grid-column: 1 / span 2;
+    grid-row: 5 / span 1;
+    background-color: #ebebeb;
+    /* height: 100px; */
+}
+
+#section-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1 fr;
+    grid-gap: 2px;
+    margin: 50px 10px 5px 5px;
+    background-color: #777;
+    color: #ebebeb;
+    text-align: center;
+}
+#article {
+    grid-column: 1 / span 3;
+    background-color: #777;
+    color: #ebebeb;
+    height: 30px;
+    margin: 20px;
+}
+
+#htags {
+    grid-column: 1 / span 3;
+    background-color: #ebebeb;
+    height: 50px;
+    margin: 20px 20px 0px 20px;
+    color: #777;
+}
+
+#ptag {
+    grid-column: 1 / span 3;
+    background-color: #ebebeb;
+    height: 50px;
+    margin: 10px 20px 20px 20px;
+    color: #777;
 }
