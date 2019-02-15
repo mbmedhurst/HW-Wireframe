@@ -11,7 +11,7 @@ body {
     grid-template-rows: 1fr 1fr 2fr 1fr;
     background-color: #777;
     grid-gap: 10px;
-    margin: 10px 50px 50px 50px;
+    margin: 10px 50px;
 }
 
 /* this is for the flexbox with centered text inside each cell */
@@ -60,6 +60,7 @@ body {
     grid-column: 1 / span 2;
     grid-row: 5 / span 1;
     background-color: #ebebeb;
+    text-align: center;
     /* height: 100px; */
 }
 
